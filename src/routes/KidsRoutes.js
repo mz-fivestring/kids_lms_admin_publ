@@ -15,6 +15,7 @@ import QuzSchedule from "../pagesQuz/Schedule";
 import QuzGroup from "../pagesQuz/Group";
 import QuzCategory from "../pagesQuz/Category";
 import QuzContent from "../pagesQuz/Content";
+import PubUi from "../pub/Ui";
 
 const sidebar_category = [
   {
@@ -56,6 +57,13 @@ const sidebar_category = [
       { text: "퀴즈백과 편성/카테고리 관리", path: "/quz/category" },
       { text: "퀴즈콘텐츠 관리", path: "/quz/content" },
     ],
+  },
+  {
+    text: "퍼블메뉴",
+    path: "/pub/ui",
+    sub: [
+      { text: "퍼블 메뉴 UI", path: "/pub/ui" }
+    ]
   }
 ];
 
@@ -85,6 +93,7 @@ const KidsRoutes = () => {
           <Route path="/quz/group" element={<QuzGroup />} />
           <Route path="/quz/category" element={<QuzCategory />} />
           <Route path="/quz/content" element={<QuzContent />} />
+          <Route path="/pub/ui" element={<PubUi />} />
         </Routes>
       </DefaultLayout>
     </Router>

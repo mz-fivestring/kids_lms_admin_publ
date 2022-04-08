@@ -356,6 +356,21 @@
     }
 }
 
+.cpnt_keyword { 
+    .cpnt-in { display:block; display:flex; flex-flow:row wrap; justify-content:flex-start; width:100%; height:26px; padding:4px 6px; line-height:18px; border:1px solid $c-bd-input; border-radius:2px; line-height:1.2;
+        .keywordList { display:inline-block; line-height:17px;
+            .item { display:inline-block; overflow:hidden; height:17px; margin-right:4px; padding:0 5px; background-color:$c-bg-sb-ov; border-radius:8px; font-size:.9rem;
+                span { display:inline-block; vertical-align:baseline; }
+                button { display:inline-block; overflow:hidden; width:13px; height:17px; margin-left:2px; padding:0; background-color:transparent; white-space:nowrap; vertical-align:baseline; line-height:17px; cursor:pointer;
+                    &::before { content:"\2715"; display:inline-block; margin-right:13px; font-size:0.8rem; }
+                }
+                &:hover { filter:contrast(90%); }
+            }
+        }
+        input { flex:1; height:17px; padding-left:0; border:0 solid transparent; }
+    }
+}
+
 
 .cpnt_errorMessage { display:flex;
     p { flex:0 1 auto; color:$c-mi; 
