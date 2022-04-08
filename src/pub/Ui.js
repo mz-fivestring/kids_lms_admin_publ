@@ -3,7 +3,6 @@ const PubUi = ( props ) => {
 
     const [keywordList, setKeywordList] = useState([]);
     const handleKeywordList = useCallback((e) => {
-        console.log(e.keyCode);
         if((e.keyCode == 13 || e.keyCode == 188) && (e.target.value !="")){
             let item = document.createElement("span");
             let text = document.createElement("span");
