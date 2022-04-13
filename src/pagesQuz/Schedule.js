@@ -98,7 +98,6 @@ const QuzSchedule = () => {
     {no:7, category:"세계와 역사",       subject:"세계탐험",             bannerImg:require("../assets/img/sample_100.png"), quz:50, date:"2022-04-17", action: ""},
   ]);
   const today = new Date();
-  console.log(today.toISOString().substr(0,10));
 
   return (
     <>
@@ -131,7 +130,7 @@ const QuzSchedule = () => {
                 <tr key={data.no} className={(today.toISOString().substr(0,10)==data.date)?'today':''}>
                     <td><input type={"checkbox"} /></td>
                     <td>{data.no}</td>
-                    <td>{data.category}</td>
+                    <td className={(data.action=="event")?'cid-event':''}>{data.category}</td>
                     <td>{data.subject}</td>
                     <td className="cid-img"><img src={ data.bannerImg } /></td>
                     <td>{data.quz}</td>
@@ -145,7 +144,7 @@ const QuzSchedule = () => {
                     <td>식물에 대해서</td>
                     <td className="cid-img"><img src={ require('../assets/img/sample_100.png') } /></td>
                     <td>100</td>
-                    <td className="isToday" data-date="2022-04-15">2022-04-15</td>
+                    <td>2022-04-15</td>
                 </tr>
                 <tr>
                     <td><input type={"checkbox"} /></td>
@@ -154,7 +153,7 @@ const QuzSchedule = () => {
                     <td>식물에 대해서</td>
                     <td className="cid-img"><img src={ require('../assets/img/sample_100.png') } /></td>
                     <td>100</td>
-                    <td className="isToday" data-date="2022-04-14">2022-04-14</td>
+                    <td>2022-04-14</td>
                 </tr>
                 <tr>
                     <td><input type={"checkbox"} /></td>
@@ -163,7 +162,7 @@ const QuzSchedule = () => {
                     <td>식물에 대해서</td>
                     <td className="cid-img"><img src={ require('../assets/img/sample_100.png') } /></td>
                     <td>100</td>
-                    <td className="isToday" data-date="2022-04-13">2022-04-13</td>
+                    <td>2022-04-13</td>
                 </tr>
                 <tr>
                     <td><input type={"checkbox"} /></td>
@@ -172,7 +171,7 @@ const QuzSchedule = () => {
                     <td className="cid-event">물에서 사는 동룡 퀴즈</td>
                     <td className="cid-img"><img src={ require('../assets/img/sample_100.png') } /></td>
                     <td>230</td>
-                    <td className="isToday" data-date="2022-04-12">2022-04-12</td>
+                    <td>2022-04-12</td>
                 </tr> */}
             </tbody>
         </table>
