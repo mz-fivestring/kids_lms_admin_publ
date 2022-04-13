@@ -116,6 +116,7 @@
                 &.active { position:relative; 
                     &::after { content:""; display:inline-block; position:absolute; right:-18px; top:50%; transform:translateY(-50%); width:0; height:0; border-width:6px 0 6px 12px; border-style:solid; border-color:transparent transparent transparent $c-mi; }
                 }
+                &.today { border:2px solid $c-gry; }
             } 
         }
     }

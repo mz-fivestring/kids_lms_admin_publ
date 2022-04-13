@@ -87,6 +87,18 @@ const QuzSchedule = () => {
     e.target.parentNode.parentNode.parentNode.nextElementSibling.childNodes[0].value = "";
     e.target.parentNode.parentNode.parentNode.nextElementSibling.childNodes[1].value = "";
   };
+  
+  const [data, setData] = useState([
+    {no:1, category:"동물",             subject:"물에서 사는 공룡 퀴즈", bannerImg:require("../assets/img/sample_100.png"), quz:50, date:"2022-04-11", action: ""},
+    {no:2, category:"식물",             subject:"식물에 대해서",         bannerImg:require("../assets/img/sample_100.png"), quz:50, date:"2022-04-12", action: ""},
+    {no:3, category:"첨단과학과 태양계", subject:"우주",                 bannerImg:require("../assets/img/sample_100.png"), quz:50, date:"2022-04-13", action: "event"},
+    {no:4, category:"신체와 건강",       subject:"우리 몸",              bannerImg:require("../assets/img/sample_100.png"), quz:50, date:"2022-04-14", action: ""},
+    {no:5, category:"스포츠",           subject:"축구",                 bannerImg:require("../assets/img/sample_100.png"), quz:50, date:"2022-04-15", action: ""},
+    {no:6, category:"숫자와 도형",       subject:"알쏭달쏭 숫자 대결",    bannerImg:require("../assets/img/sample_100.png"), quz:50, date:"2022-04-16", action: ""},
+    {no:7, category:"세계와 역사",       subject:"세계탐험",             bannerImg:require("../assets/img/sample_100.png"), quz:50, date:"2022-04-17", action: ""},
+  ]);
+  const today = new Date();
+  console.log(today.toISOString().substr(0,10));
 
   return (
     <>
@@ -115,14 +127,25 @@ const QuzSchedule = () => {
               </tr>
             </thead>
             <tbody>
-                <tr>
+              {data?.map((data) => (
+                <tr key={data.no} className={(today.toISOString().substr(0,10)==data.date)?'today':''}>
                     <td><input type={"checkbox"} /></td>
-                    <td>1</td>
-                    <td>동물</td>
-                    <td>물에서 사는 동룡 퀴즈</td>
+                    <td>{data.no}</td>
+                    <td>{data.category}</td>
+                    <td>{data.subject}</td>
+                    <td className="cid-img"><img src={ data.bannerImg } /></td>
+                    <td>{data.quz}</td>
+                    <td>{data.date}</td>
+                </tr>
+              ))}
+                {/* <tr>
+                    <td><input type={"checkbox"} /></td>
+                    <td>2</td>
+                    <td>식물</td>
+                    <td>식물에 대해서</td>
                     <td className="cid-img"><img src={ require('../assets/img/sample_100.png') } /></td>
-                    <td>50</td>
-                    <td>2022-02-09</td>
+                    <td>100</td>
+                    <td className="isToday" data-date="2022-04-15">2022-04-15</td>
                 </tr>
                 <tr>
                     <td><input type={"checkbox"} /></td>
@@ -131,7 +154,16 @@ const QuzSchedule = () => {
                     <td>식물에 대해서</td>
                     <td className="cid-img"><img src={ require('../assets/img/sample_100.png') } /></td>
                     <td>100</td>
-                    <td>2022-02-10</td>
+                    <td className="isToday" data-date="2022-04-14">2022-04-14</td>
+                </tr>
+                <tr>
+                    <td><input type={"checkbox"} /></td>
+                    <td>2</td>
+                    <td>식물</td>
+                    <td>식물에 대해서</td>
+                    <td className="cid-img"><img src={ require('../assets/img/sample_100.png') } /></td>
+                    <td>100</td>
+                    <td className="isToday" data-date="2022-04-13">2022-04-13</td>
                 </tr>
                 <tr>
                     <td><input type={"checkbox"} /></td>
@@ -140,8 +172,8 @@ const QuzSchedule = () => {
                     <td className="cid-event">물에서 사는 동룡 퀴즈</td>
                     <td className="cid-img"><img src={ require('../assets/img/sample_100.png') } /></td>
                     <td>230</td>
-                    <td>2022-02-01</td>
-                </tr>
+                    <td className="isToday" data-date="2022-04-12">2022-04-12</td>
+                </tr> */}
             </tbody>
         </table>
 
