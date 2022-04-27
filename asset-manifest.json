@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/kids_lms_admin_publ/static/css/main.b1d3b1ec.css",
+    "main.css": "/kids_lms_admin_publ/static/css/main.257f690d.css",
     "main.js": "/kids_lms_admin_publ/static/js/main.efd56b4e.js",
     "static/media/LGSmHaTSB.woff2": "/kids_lms_admin_publ/static/media/LGSmHaTSB.4ac5a4c07192f6cc784f.woff2",
     "static/media/LGSmHaTR.woff2": "/kids_lms_admin_publ/static/media/LGSmHaTR.63bb159fef8a2a8b328c.woff2",
@@ -10,7 +10,7 @@
     "index.html": "/kids_lms_admin_publ/index.html"
   },
   "entrypoints": [
-    "static/css/main.b1d3b1ec.css",
+    "static/css/main.257f690d.css",
     "static/js/main.efd56b4e.js"
   ]
 }
