@@ -57,7 +57,7 @@ div { scrollbar-color: #dadce0 rgba(255,255,255,.2); }
 html, body { height:100%; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:auto; text-rendering:geometricPrecision; color:$c-tm; font-size:$fs-d; font-weight:400; }
 
 
-.dp-blind { position:absolute !important; width:1px !important; height:1px !important; padding:0 !important; margin:-1px !important; border:0px solid transparent !important; line-height:0 !important; font-size:0 !important; white-space:nowrap !important; overflow:hidden !important; clip:rect(0,0,0,0) !important; clip-path:inset(50%) !important; }
+.blind, .dp-blind { position:absolute !important; width:1px !important; height:1px !important; padding:0 !important; margin:-1px !important; border:0px solid transparent !important; line-height:0 !important; font-size:0 !important; white-space:nowrap !important; overflow:hidden !important; clip:rect(0,0,0,0) !important; clip-path:inset(50%) !important; }
 
 .dp-none { display:none !important; }
 
